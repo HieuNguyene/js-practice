@@ -1,0 +1,15 @@
+const students = [
+  { name: "Anh", score: 8.5, pass: true },
+  { name: "Bắc", score: 4.0, pass: false },
+  { name: "Chi", score: 9.2, pass: true },
+  { name: "Dũng", score: 5.5, pass: true },
+  { name: "Nam", score: 3.0, pass: false }
+];
+
+var totalScore = students.reduce((acc,student)=>{
+    return acc + student.score;
+},0);
+
+var avergeScore = totalScore > 0 ? totalScore/students.length : 0;
+
+console.log(avergeScore);
